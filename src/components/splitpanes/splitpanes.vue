@@ -399,7 +399,7 @@ export default {
           this.redoSplitters()
 
           // 3. Resize the panes.
-          this.resetPaneSizes({ addedPane: this.panes[index] })
+          // this.resetPaneSizes({ addedPane: this.panes[index] })
 
           // 4. Fire `pane-add` event.
           this.$emit('pane-add', { index, panes: this.panes.map(pane => ({ min: pane.min, max: pane.max, size: pane.size })) })
@@ -418,7 +418,7 @@ export default {
         this.redoSplitters()
 
         // 3. Resize the panes.
-        this.resetPaneSizes({ removedPane: { ...removed, index } })
+        // this.resetPaneSizes({ removedPane: { ...removed, index } })
 
         // 4. Fire `pane-remove` event.
         this.$emit('pane-remove', { removed, panes: this.panes.map(pane => ({ min: pane.min, max: pane.max, size: pane.size })) })
