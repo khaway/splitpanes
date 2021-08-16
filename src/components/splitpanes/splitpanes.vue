@@ -132,15 +132,15 @@ export default {
 
     // On splitter dbl click or dbl tap maximize this pane.
     onSplitterDblClick (event, splitterIndex) {
-      let totalMinSizes = 0
-      this.panes = this.panes.map((pane, i) => {
-        pane.size = i === splitterIndex ? pane.max : pane.min
-        if (i !== splitterIndex) totalMinSizes += pane.min
-
-        return pane
-      })
-      this.panes[splitterIndex].size -= totalMinSizes
-      this.$emit('pane-maximize', this.panes[splitterIndex])
+      // let totalMinSizes = 0
+      // this.panes = this.panes.map((pane, i) => {
+      //   pane.size = i === splitterIndex ? pane.max : pane.min
+      //   if (i !== splitterIndex) totalMinSizes += pane.min
+      //
+      //   return pane
+      // })
+      // this.panes[splitterIndex].size -= totalMinSizes
+        this.$emit('splitter-dbl-click', this.panes[splitterIndex])
     },
 
     onPaneClick (event, paneId) {
